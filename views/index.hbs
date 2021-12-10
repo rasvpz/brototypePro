@@ -1,0 +1,40 @@
+
+<div class="row">
+  <div class="col-sm-3 p-3 text-dark" style="margin-right: 66px;">
+<form action="/register" method="POST" style="border:1px solid #ccc; width: 200px; padding: 10px;">
+
+    <h1>Sign up</h1>
+    <p>Please fill this form.</p>
+    <hr>
+    <br>
+
+    <label for="fName"><span style="color:rgb(71, 71, 71)">    
+    {{#if validation.nameVali}}
+    <span style="color: red; font-weight:bold">{{validation.nameVali}}</span>
+    {{else}}
+    <b>{{validation.default}}</b>
+    {{/if}}
+     </label>
+
+    <input type="text" name="fName" autocomplete="cc-given-name"><br><br>
+    <label for="sName"><span style="color:rgb(71, 71, 71)"><b>Password</b></span></label>
+    <input type="password" name="sName" autocomplete="new-password"><br><br><br>
+    <div style="float: right;">
+      <button class="cancel" type="button">Cancel</button>
+      <button class="submit" type="submit">Register</button>
+    </div>
+    <br><br><br>
+</form>
+</div>
+<div class="col-sm-3 p-3 text-white text-center" style="height: 405px; width:50%; margin-top:16px; background-color:black">  <h2 style=" margin-top:20%">
+   {{#if validation.myTitle}}
+    <span>{{validation.myTitle}}</span>
+    {{else}}
+    <b>{{validation.title}}</b>
+    {{/if}}
+     </label>
+ 
+  </h2></div>
+
+
+</div>
